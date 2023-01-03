@@ -158,7 +158,7 @@ h1{
   height: 3em;
   width: 7em;
   padding: 1em;
-  font-size: 1em;
+  font-size: .8em;
   border-radius: 10px;
   border: none;
 }
@@ -168,8 +168,6 @@ h1{
 .nxt_step{
   display: flex;
   justify-content: right;  
-  margin-bottom: 2em;
-
 }
 /*Bouton Toggle */
 input[type="checkbox"].toggle{

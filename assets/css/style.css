@@ -66,7 +66,7 @@ div{
 }
 .txt_field{
 display: flex;
-flex-direction: column;
+flex-direction: row;
 flex-wrap: wrap;
  justify-content: space-between;
   text-align: center;
@@ -79,17 +79,19 @@ box-sizing: border-box;
     border: 2px solid var(--bleuColor);
     margin-top: .7em;
 }
-.input_text{
+.password{
   box-sizing: border-box;
     background-color: transparent;
     color: var(--bleuColor);
     font-size: 14px;
-    height: 55px;
-    padding: 0 50px;
-    width: 70%;
+    width: 85%;
     border: none;
     margin-top: 25px;
 }
+input:focus {
+  outline: none;
+}
+
 .icon{
   color: var(--bleuColor);
   font-size: 1em;
@@ -209,4 +211,6 @@ background-color: var(--whiteColor);
 }
 input[type="checkbox"].toggle:checked +label::before{
   background-color: var(--bleuColor);
+  transition: .4s;
+
   }

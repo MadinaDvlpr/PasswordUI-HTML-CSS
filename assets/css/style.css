@@ -1,0 +1,212 @@
+/* ----Les imports----- */
+
+/* ----Le reset----- */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* ----Les variables----- */
+
+:root{
+  --redColor:rgb(255, 4, 4);
+  --greenColor: green;
+  --yellowColor: yellow;
+  --whiteColor:rgb(252, 248, 248);
+  --lightGrey:rgb(219, 217, 217);
+  --bleuColor:rgb(1, 4, 57);
+  --bleuTransparent:hsla(243, 100%, 19%, 0.44)
+}
+/* ----styling éléments----- */
+
+
+h2{
+  margin:2em;
+}
+a{
+  color: var(--bleuColor);
+}
+
+input{
+  border: 0;
+  background-color: transparent;
+}
+label{
+  font-weight: 800;
+  font-size: .8em;
+}
+img{
+  width: 120px;
+  clip-path:ellipse(33% 50%);
+  padding: 0;
+}
+p{
+  font-size: .8em;
+}
+/* ----Mise en page générale----- */
+/* La Grid en Flexbox*/
+
+body{
+
+  width: 100vw;
+  background-color: var(--lightGrey);
+  color: var(--bleuColor);
+}
+div{ 
+      font-size: .1.5em; 
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 70vh;
+  margin: 2em;
+}
+.txt_field{
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+ justify-content: space-between;
+  text-align: center;
+box-sizing: border-box;
+    background-color: transparent;
+    color: var(--bleuColor);
+    font-size: 14px;
+    height: 55px;
+    border-radius: 10px;
+    border: 2px solid var(--bleuColor);
+    margin-top: .7em;
+}
+.input_text{
+  box-sizing: border-box;
+    background-color: transparent;
+    color: var(--bleuColor);
+    font-size: 14px;
+    height: 55px;
+    padding: 0 50px;
+    width: 70%;
+    border: none;
+    margin-top: 25px;
+}
+.icon{
+  color: var(--bleuColor);
+  font-size: 1em;
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  align-self: center;
+  margin: auto;
+  padding: 3em;
+  border-radius: 10px;
+  box-sizing: border-box;
+   width: 45vw; 
+   height:78vh; 
+   box-shadow: 0px 0px 5px 0px rgba(213,215,240,0.67);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(213,215,240,0.67);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(213,215,240,0.67);
+  background-color: var(--whiteColor);
+  color: var(--bleuColor);
+
+}
+.login_header{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 3em 0;
+}
+h1{
+  margin-left: 1em;
+}
+
+.pseudo_id{
+  font-weight: bolder;
+  font-size: 1em;
+}
+
+.input_section{
+  width: 30vw;
+  margin-bottom: 2em;
+}
+.btn_section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15%;
+  width: 30vw;
+}
+.btn {
+  color: var(--whiteColor);
+  background-color: var(--bleuColor);
+  height: 3em;
+  width: 7em;
+  padding: 1em;
+  font-size: 1em;
+  border-radius: 10px;
+  border: none;
+}
+.signed_in{
+  display: flex;
+}
+.nxt_step{
+  display: flex;
+  justify-content: right;  
+  margin-bottom: 2em;
+
+}
+/*Bouton Toggle */
+input[type="checkbox"].toggle{
+  opacity: 0;
+  position: absolute;
+  left: -9000px;
+  top: -9000px;
+ 
+}
+input[type="checkbox"].toggle + label{
+position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+ }
+
+input[type="checkbox"].toggle + label::before{
+  content: "";
+  width: 4em;
+  height: 2em;
+  background-color: var(--whiteColor);
+  border: solid 1px var(--bleuColor);
+  border-radius: 2em;
+  margin-right: .25em;
+}
+
+input[type="checkbox"].toggle:checked + label{
+  color: var(--bleuColor);
+ 
+}
+
+input[type="checkbox"].toggle +label::after{
+  content: "";
+  position: absolute;
+  left: .2em;
+  width: 1.8em;
+  height: 1.8em;
+  background-color: var(--bleuColor);
+  border-radius: 1em;
+  transition: .4s;
+}
+input[type="checkbox"].toggle:checked +label::after{
+transform: translateX(100%);  
+transition: .4s;
+background-color: var(--whiteColor);
+}
+input[type="checkbox"].toggle:checked +label::before{
+  background-color: var(--bleuColor);
+  }
